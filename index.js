@@ -167,6 +167,7 @@ client.on('message', async message =>{
     //Custom emoji
     const olYes = '<:OlYes:770323355551006782>'
 
+    if(command === 'yes'){
         let sentMessage = await message.channel.send('Gimmie the Ol Yes!');
         sentMessage.react(olYes);
 
@@ -197,6 +198,7 @@ client.on('message', async message =>{
         setTimeout(()=>{
             message.channel.send(`Looks like i got ${reactionCount} of ya talkin to me, ill settle for 75% visibility`)
         }, 20000);
+    }
 });
 
 //API Call Commands
@@ -274,4 +276,4 @@ function getUserFromMention(mention){
 
 
 //Private Token Goes Here(Token taken out for privacy)
-client.login();
+client.login('');
